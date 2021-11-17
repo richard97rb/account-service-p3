@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  account-service:
+    image: account-service
+    restart: always
+    container_name: account-service
+    ports:
+      - '8082:8082'
+    networks:
+      - 'config-network'
+networks:
+  config-network:
+    external: true
